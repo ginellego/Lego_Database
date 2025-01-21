@@ -1,15 +1,3 @@
-/*
-**Course:	 COMP3380
-**Instructor:    Patrick Dubois
-**Project Part:		 2
-**Name:		 Ginelle Temull, Braydon Schick
-**
-**Description: 	  hello
-*/
-
-// checking this pushs to origin from clone branch
-// check 2
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -44,8 +32,6 @@ public class legoQueries {
 		System.out.println("Exiting...");
 	}
 
-    
-    
 
 	public static void runConsole(MyDatabase db) {
 
@@ -108,19 +94,12 @@ public class legoQueries {
 
 			else if (parts[0].equals("mostColors")) {
 				try {
-
-				// 	if (parts.length >= 2)
-						db.mostColors();
-				// 	else
-				// 		System.out.println("Require an argument for this command");
-
+					db.mostColors();
 				
 				} catch (Exception e) {
 					System.out.println("id must be an integer");
 				}
 			}
-
-
 
 			else if (parts[0].equals("ctpieces")) {
 				try {
@@ -148,8 +127,6 @@ public class legoQueries {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				}
 
-				
-
 			} 
 			else if (parts[0].equals("mc")) {
 
@@ -163,8 +140,6 @@ public class legoQueries {
 				} catch (Exception e) {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				}
-
-				
 			}
 
 			else if (parts[0].equals("noset")) {
@@ -180,7 +155,6 @@ public class legoQueries {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				}
 
-				
 			}
 
 			else if (parts[0].equals("sc")) {
@@ -194,8 +168,6 @@ public class legoQueries {
 				} catch (Exception e) {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				}
-
-				
 			}
 
 			else if (parts[0].equals("inv")) {
@@ -222,9 +194,7 @@ public class legoQueries {
 				} catch (Exception e) {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				}
-
-
-				
+	
 			}
 			else if (parts[0].equals("cc")) {
 				try {
@@ -237,8 +207,7 @@ public class legoQueries {
 				} catch (Exception e) {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				}
-
-				
+	
 			}
 			else if (parts[0].equals("mini")) {
 				try {
@@ -267,9 +236,7 @@ public class legoQueries {
 				} catch (Exception e) {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				}
-				
 			}
-			
 
 			else if (parts[0].equals("setwithout")) {
 				
@@ -336,9 +303,7 @@ public class legoQueries {
 					System.out.println("That input doesn't look right. Enter h to get help and see the command legend.");
 				
 				}
-		
 			}
-
 
 			else if (parts[0].equals("partsYear")) {
 
@@ -406,8 +371,6 @@ public class legoQueries {
 
 		System.out.println("---- end help ----- ");
 	}
-
-
 
 }
 
@@ -483,9 +446,6 @@ class MyDatabase {
 
 
 					System.out.println("\nThe most common parts in all the sets:");
-
-
-
 
 					while(resultSet.next()) {
 							System.out.println("Set Name: " + resultSet.getString("SetName") + " | Part Number:  " + resultSet.getString("part_num") + " | Part Name:  " + resultSet.getString("partName") + " | Part Count: " + resultSet.getString("partCount"));
